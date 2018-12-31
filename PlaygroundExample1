@@ -1,0 +1,177 @@
+import UIKit
+
+// SHIFT + COMMAND + ENTER to compile code
+
+//: ex: let constant: Int = 10
+//: var number: Double = 10.5
+//: if you hold the Option key and click the variable, it will tell you the TYPE
+
+// NUMBERS
+// let constant = 10
+// var number = 10
+// var result = number + constant
+
+//
+//var greeting = "Hello"
+//var name = "Simon"
+//var message = greeting + name
+//
+//message.uppercased()
+//message.lowercased()
+//message.count
+//
+//
+//var bookPrice = 39
+//var numOfCopies = 5
+//var totalPrice = bookPrice * numOfCopies
+////var totalPriceMessage = "The price of the book is $" + String(totalPrice) ---RECOMMENDED WAY BELOW
+//var totalPriceMessage = "The price of the book is $ \(totalPrice)" // STRING INTERPOLATION
+//
+//var timeYouWakeUp = 6
+
+// IF ELSE STATEMENTS
+//if timeYouWakeUp == 6 {
+//    print("Cook yourself a big breakfast!")
+//} else {
+//    print ("Go out for breakfast")
+//}
+// SWITCH CASES
+//switch timeYouWake {
+//case 6:
+//    print ("Cook yourself a big breakfast!")
+//default:
+//    print ("Go out for breakfast")
+//
+//}
+// IF ELSE
+//var bonus = 5000
+//
+//if bonus >= 10000 {
+//
+//    if bonus >= 10000 {
+//        print ("I will travel to Paris and London!")
+//    } else if bonus >= 5000 && bonus < 10000 {
+//        print ("I will travel to Tokyo")
+//    } else if bonus >= 1000 && bonus < 5000 {
+//        print ("I will travel to Bangkok")
+//    } else {
+//        print ("Just stay home")
+//    }
+//
+//
+//}
+//
+// SWITCH OPTIONS
+//switch bonus {
+//case 10000...:
+//    print ("I will travel to Paris and London!")
+//case 5000...9999:
+//    print("I will travel to Tokyo")
+//case 1000...4999:
+//    print("I will travel to Bangkok")
+//default:
+//    print("Just stay home")
+//}
+
+//
+//var bookCollection = ["Tool of Titans", "Rework", "Your Move"]
+//bookCollection[0]
+//bookCollection.append("Authority")
+//bookCollection.count
+//
+//for index in 0...3 {
+//    print (bookCollection[index])
+//}
+//
+//// BETTER WAY OF WRITING IT
+//for index in 0...bookCollection.count - 1 {
+//    print (bookCollection[index])
+//}
+//
+//for book in bookCollection {
+//    print (book)
+//}
+//
+//
+//var bookCollectionDict = ["1328683788": "Tool of Titans", "0307463745": "Rework", "1612060919": "Authority"]
+//
+//for (key, value) in bookCollectionDict {
+//    print ("ISBN: \(key)")
+//    print ("Title: \(value)")
+//}
+
+ //EMOJI Dictionairy
+//var emojiDict: [String: String] = [
+//    "👻": "Ghost",
+//    "💩": "Poop",
+//    "😠": "Angry",
+//    "😱": "Scream",
+//    "👾": "Alien Monster"]
+//
+//var wordToLookup = "👻"
+//var meaning = emojiDict[wordToLookup]
+//
+//// if meaning has a value, then print(meaning). Checks to see if meaning has a value, to prevent error
+//if let meaning = meaning {
+//print(meaning)
+//}
+//
+//wordToLookup = "😠"
+//meaning = emojiDict[wordToLookup]
+//
+//if let meaning = meaning {
+//print (meaning)
+//}
+
+
+// OPTIONALS: Can have a value or not
+//var jobTitle : String?
+//jobTitle = "iOS Developer"
+//
+//if let jobTitleWithValue = jobTitle {
+//    var message = "Your job title is " + jobTitle
+//
+//}
+
+var emojiDict = ["👻": "Ghost", "🤖": "Robot", "😠": "Angry", "🤓": "Nerdy", "👾": "Alien Monster"]
+var wordToLookup = "🤓"
+var meaning = emojiDict [wordToLookup]
+// displays the orange box
+let containerView = UIView(frame: CGRect(x: 0, y:0, width:300, height:300))
+containerView.backgroundColor = UIColor.orange
+
+// includes the smiley for nerdy
+let emojiLabel = UILabel(frame: CGRect(x:95, y:20, width:150, height:150))
+emojiLabel.text = wordToLookup
+emojiLabel.font = UIFont.systemFont(ofSize:100.0)
+
+containerView.addSubview(emojiLabel)
+
+//  includes the text "Nerdy"
+let meaningLabel = UILabel(frame: CGRect(x:110, y:100, width:150, height:150))
+meaningLabel.text = meaning
+meaningLabel.font = UIFont.systemFont(ofSize:30.0)
+meaningLabel.textColor = UIColor.white
+
+containerView.addSubview(meaningLabel)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
